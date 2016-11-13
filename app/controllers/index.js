@@ -38,13 +38,6 @@ pointsG
 .style("fill", "black")
 .style("stroke-width", "1px")
 
-//Draw some circles
-d3.select("svg")
-.selectAll("circle")
-.data(data)
-.enter()
-.append("circle")
-.attr("r", radius)
 
 //Add the hover attributes
 //Add Written Names
