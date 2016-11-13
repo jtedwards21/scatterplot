@@ -1,9 +1,10 @@
 var express = require('express')
+var routes = require('./app/routes/index.js')
 var app = express()
+app.use('/public', express.static(process.cwd() + '/public'));
+app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+routes(app)
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
