@@ -15,4 +15,16 @@ var radius = 5;
 data.sort(function(a, b){
   return a.Place - b.Place
 }
+
+//Draw some circles
+d3.select("svg")
+.selectAll("circle")
+.data(data)
+.enter()
+.append("circle")
+.attr("r", radius)
+.attr("cx", function(d, i){return xScale(d.Seconds)})
+.attr.("cy", function(d) {return height - yScale(d.Place)})
+
+
 })
