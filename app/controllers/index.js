@@ -40,6 +40,10 @@ pointsG
 
 
 //Add the hover attributes
+pointsG.on("mouseover"　function(d){
+d3.select(this).style("fill", "white")
+})
+
 //Add Written Names
 
 
