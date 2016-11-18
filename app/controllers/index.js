@@ -1,3 +1,4 @@
+
 var addr = "https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json"
 var height = 100;
 var width = 700;
@@ -37,15 +38,6 @@ pointsG
 .attr("cy", function(d) {return yScale(d.Place)})
 .style("fill", "black")
 .style("stroke-width", "1px")
-
-
-//Add the hover attributes
-pointsG.on("mouseover"　function(d){
-d3.select(this).style("fill", "white")
-})
-
-//Add Written Names
-
 
 
 })
