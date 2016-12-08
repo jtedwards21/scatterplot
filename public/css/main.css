@@ -1,11 +1,11 @@
 body {
-  background-color: #7F7E3C;
+  background-color: #555;
   margin: 0 auto;
 }
 
 
 #bar-chart {
-  background-color: #FFFB46;
+  background-color: #EEEEEE;
 }
 
 .graph-title {
@@ -15,7 +15,7 @@ body {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 0px;
-  color: #333;
+  color: #555;
 }
 
 .graph-subtitle {
@@ -29,7 +29,7 @@ body {
 }
 
 #box {
-  background-color: #FFFB46;
+  background-color: #EEEEEE;
   margin-left: auto;
   margin-right: auto;
   float: none;

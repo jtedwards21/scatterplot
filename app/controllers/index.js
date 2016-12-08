@@ -26,7 +26,7 @@ var maxTime = d3.max(data, function(d){return d.Seconds})
 var minTime = d3.min(data, function(d){return d.Seconds})
 var xScale = d3.scaleLinear().domain([maxTime, minTime]).range([0,width])
 var yScale = d3.scaleLinear().domain([maxRank, 0]).range([height, 0])
-var radius = 1;
+var radius = 5;
 
 //I've not changed the dimensions of 'barchart'
 
@@ -67,7 +67,25 @@ pointsG
 .attr("cx", function(d, i){return xScale(d.Seconds)})
 .attr("cy", function(d) {return yScale(d.Place)})
 .style("fill", "black")
-.style("stroke-width", "1px")
+.style("stroke-width", "3px")
+.style("stroke", "#7035BB")
+//Code for tooltip
+.on("mouseover", function(d){
+var rect = d3.select(this);
+rect.attr("class", "mouseover")
+var name = d.Name;
+var year = d.Year;
+var nationality = d.Nationality;
+var doping = d.Doping;
+var url = d.URL;
+var place = d.Place;
+var raceTime = d.Time;
+div.style("opacity", .9)
+div.html("<span class='name'>" + name + "</span><br><span class='year'>" + year + "</span><br><span class='nationality'>" + nationality + "</span><br><span class='doping'>" + doping + "</span><br><span class='url'>" + url + "</span>")
+.style("left", (d3.event.pageX + 5) + "px")
+.style("top", (d3.event.pageY - 50) + "px");
+
+})
 
 
 })
