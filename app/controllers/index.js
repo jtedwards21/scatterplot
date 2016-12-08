@@ -4,17 +4,13 @@ var addr = "https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/
 var margins = {
 "top": 50,
 "left": 30,
-"bottom": 5,
+"bottom": 20,
 "right": 10
 }
 
 var height = 700 - margins.top - margins.bottom;
-var width = 500 - margins.left - margins.right;
+var width = 700 - margins.left - margins.right;
 
-//Set the height of the box
-d3.select(".box")
-.attr("height", height + margins.top + margins.bottom)
-.attr("width", width + margins.left + margins.right)
 
 //Set size of svg element
 d3.select("svg")
@@ -28,12 +24,15 @@ d3.json(addr, function(data){
 var maxRank = d3.max(data, function(d){return d.Place})
 var maxTime = d3.max(data, function(d){return d.Seconds})
 var minTime = d3.min(data, function(d){return d.Seconds})
-var xScale = d3.scaleLinear().domain([maxTime, minTime]).range([0,300])
+var xScale = d3.scaleLinear().domain([maxTime, minTime]).range([0,width])
 var yScale = d3.scaleLinear().domain([maxRank, 0]).range([height, 0])
 var radius = 1;
 
+//I've not changed the dimensions of 'barchart'
 
 //Append and Adjust Parent Element
+
+
 d3.select("svg")
 .append("g")
 .attr("id", "containerG")

@@ -1,5 +1,6 @@
 body {
   background-color: #7F7E3C;
+  margin: 0 auto;
 }
 
 
@@ -27,11 +28,14 @@ body {
   color: #555;
 }
 
-.box {
+#box {
   background-color: #FFFB46;
-  margin: 40px auto;
-  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+　　width: 700px;
+  height: 700px;
 }
 
 .details {
