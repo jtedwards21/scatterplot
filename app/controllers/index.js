@@ -59,6 +59,10 @@ d3.select("#pointsG")
 .attr("class","overallG")
 
 
+var div= d3.select("#box").append("div")
+.attr("class", "tooltip")
+.style("opacity", 0)
+
 var pointsG = d3.selectAll("g.overallG")
 
 pointsG
